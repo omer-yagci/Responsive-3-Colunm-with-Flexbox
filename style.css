@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+}
+
+.box {
+  width: 300px;
+  height: 495px;
+  padding: 45px;
+  border-radius: 10px;
+}
+
+.sedans {
+  background-color: #e28525;
+}
+
+.suvs {
+  background-color: #006970;
+  margin: 0 20px;
+}
+
+.luxury {
+  background-color: #00403f;
+}
+
+h1 {
+  margin: 30px 0;
+  color: #f3f3f3;
+  font-family: "Oleo Script", cursive;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+p {
+  margin: 30px 0;
+  color: #f3f3f3;
+  font-family: "Abel", sans-serif;
+  line-height: 1.5rem;
+  font-size: 1.1rem;
+}
+
+button {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #83ab;
+  outline: 2px solid #fff;
+  padding: 20px 40px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+button.btn:hover,
+button.btn:active {
+  font-size: 90%;
+}
+button:hover {
+  color: #83ab;
+  cursor: pointer;
+}
+button::before {
+  position: absolute;
+  content: "Click for more info ";
+  top: 0;
+  bottom: 0;
+  left: -50px;
+  width: 0;
+  height: 100%;
+  background-color: #fff;
+  transform: skewX(15deg);
+  z-index: 1;
+  transition: 1s;
+}
+button:hover::before {
+  left: -2%;
+  width: 110%;
+}
+
+@media (max-width: 941px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+  }
+  body {
+    height: 120%;
+  }
+  .box {
+    border-radius: 20px;
+    margin: 5px 0;
+  }
+}
